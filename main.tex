@@ -1,0 +1,83 @@
+\documentclass[a4 paper,16pt,oneside]{book}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage[framemethod=TikZ]{mdframed} 
+\usepackage[pages=some]{background}
+\usepackage[top=1cm, bottom=2.5cm,left = 1cm, right = 1cm]{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage{graphicx}
+\usepackage[most, skins]{tcolorbox}
+\usepackage{fontspec}
+\newfontfamily\unicodefont{Eczar}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\setlength{\parindent}{26pt}
+\usepackage{eso-pic,graphicx}
+\usepackage{multicol}
+\title{DoM Newsletter}
+\author{Newsletter Committee}
+\date{March 04, 2024}
+\setsansfont{Poppins}[
+    Path=./Poppins/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+\setromanfont{Montserrat}[
+    Path=./Montserrat/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+\setmonofont{Ubuntu}[
+    Path=./Ubuntu/,
+    Scale=0.85,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+
+% \backgroundsetup{
+% scale=1,
+% color=black,
+% opacity=1,
+% angle=0,
+% contents={%
+%   \includegraphics[width=\paperwidth,height=\paperheight]{resources/blurb/front_cover.png}
+%   }%
+% }
+
+\pagestyle{fancy}
+
+\definecolor{silver}{rgb}{240, 240, 240}
+\pagecolor{silver}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\textcolor{red}{\hrule}
+
+\vspace{0.1cm}
+\hspace{0.5cm}{\sffamily\thepage}\hspace{0.5cm}}
+\fancyfoot[LO,RE]{
+
+  \hspace{0.5cm}{\sffamily Department of Mathematics}\hspace{0.5cm}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\begin{document}
+ %\include{tex_files/front_cover_page}
+  \pagenumbering{arabic}
+    \include{mydoc.tex}
+\end{document}
